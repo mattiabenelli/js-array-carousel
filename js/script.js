@@ -60,7 +60,7 @@ next.addEventListener('click', function(){
 });
 
 prev.addEventListener('click', function(){
-    if(itemActive > 1){
+    if(itemActive >= 1){
         //verifico l'elemento attivo (itemActive)
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
@@ -72,9 +72,9 @@ prev.addEventListener('click', function(){
         circles[itemActive].classList.add('active');
     }
     else{
+        items[itemActive].classList.remove('active');
+        circles[itemActive].classList.remove('active');
         itemActive = 4;
-        items[0,1,2,3].classList.remove('active');
-        circles[0,1,2,3].classList.remove('active');
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active');
     }
